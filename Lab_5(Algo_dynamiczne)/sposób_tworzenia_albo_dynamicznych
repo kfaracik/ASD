@@ -1,0 +1,19 @@
+Sposób tworzenia algorytmów dynamicznych (na przykładzie knapsack)
+
+1. OPIS FUNKCJI:
+2. ZAPIS REKURENCYJNY:
+3. IMPLENMEMNTACJA:
+
+
+1. OPIS FUNKCJI: f(i,w) = największy zysk jaki można osiągnąć wybierająć spośród poierwszych i przedmiotów o indeksach od 0 do i, nie przekraczając zadanej wagi W
+
+2. ZAPIS REKURENCYJNY:
+                 Zał:
+                 f(0,w) = 0    , dla w<W[0]
+                          P[0] , w > W[0]
+                 f(i,0) = 0
+                 w-W[i] >=0
+                 
+                   f(i,w) = max( f(i-1,w) , f(i-1,w-W[i)+P[i] )
+                   
+3. IMPLENMEMNTACJA:
