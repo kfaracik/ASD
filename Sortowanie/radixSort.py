@@ -24,8 +24,11 @@ def radixSort(A):      # czasami lepszy niż countSort
         position(A, P, i)
         countingSort(A, P, 10, i)   # i - aktualnie sortowana pozycja, k=10 - klucze, cyfruy 0, 1, ..., 9
         i+=1
+        print(f'Numbers {i} position:')
         printTab(P)
+        print(f'Sorted array by {i} position:')
         printTab(A)
+        print()
 
 def position(A, P, i):
     for j in range(0, len(A)):
