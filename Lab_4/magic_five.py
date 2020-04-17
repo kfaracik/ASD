@@ -71,7 +71,3 @@ t = [1, 4, 3, 6, 5, 2, 10, 12, 11, 9, 8, 7]
 median = magic_5(t, 0, len(t)-1)
 
 print(f' Median: {median}')     # set pivot as median => QS O(n);   UWAGA median możenie nie należeć do elementów tej tab (gdy paż ilość el)
-
-
-
-
