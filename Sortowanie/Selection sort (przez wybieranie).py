@@ -5,7 +5,7 @@ for j in range(len(tab)):
     min = tab[j]
 
     for i in range(j+1, len(tab)):
-        if tab[i] < min:
+        if tab[i] < min:        # reverse sort: >=
             min = tab[i]
             el = i
         if i == len(tab) - 1:
