@@ -1,4 +1,6 @@
 # Algorytm wydajny np do posortowania 1.000.000.000 osób względem dnia trygodnia w którym się urodzili (klucze 7 dni)
+# elektywna gdy tab A ma dużo el, a k jest małą liczbą
+# O(n)  potrzebuje dużo pamięci
 
 def countingSort(A, k):
     B = [0]*len(A)
