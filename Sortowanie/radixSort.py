@@ -1,9 +1,9 @@
-def countingSort(A, P, k, i):         # O(n)  potrzebuje dużo pamięci     elektywna gdy tab A ma dużo el, a k jest małą liczbą
+def countingSort(A, P, k, i):
     B = [0]*len(A)
     C = [0]*k
 
-    for i in P:             C[i] +=1          #=  for i in range(len(A)): C[A[i]] +=1,   zlicza ile  występuje elementów o danej wartości (indeks w tab C)
-    for i in range(1, k):   C[i]+=C[i-1]        # sumuje: aktualna wart + poprzednia
+    for i in P:             C[i] +=1        #=  for i in range(len(A)): C[A[i]] +=1,   zlicza ile  występuje elementów o danej wartości (indeks w tab C)
+    for i in range(1, k):   C[i]+=C[i-1]    # sumuje: aktualna wart + poprzednia
     for i in range(len(A)-1, -1, -1):       # liczymy ile jest mniejszych elementów od danego
         C[P[i]] -=1
         B[C[P[i]]] = A[i]
