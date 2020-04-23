@@ -1,3 +1,5 @@
+# Algorytm wydajny np do posortowania 1.000.000.000 osób względem dnia trygodnia w którym się urodzili (klucze 7 dni)
+
 def countingSort(A, k):
     B = [0]*len(A)
     C = [0]*k
@@ -5,11 +7,11 @@ def countingSort(A, k):
     printTab(A)
     printTab(B)
     printTab(C)
-
+    
+    # liczymy ile razy każdy nel z tab A występuje
     for i in A:             C[i] +=1          #=  for i in range(len(A)): C[A[i]] +=1
-
-    for i in range(1, k):   C[i]+=C[i-1]
-    for i in range(len(A)-1, -1, -1):       # liczymy ile jest mnbiejszych elementów od danego
+    for i in range(1, k):   C[i]+=C[i-1]    # liczymy ile jest elementów <=  od danego
+    for i in range(len(A)-1, -1, -1):       # sortujemy
         C[A[i]] -=1
         B[C[A[i]]] = A[i]
 
