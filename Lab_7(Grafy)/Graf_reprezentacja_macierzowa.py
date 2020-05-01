@@ -1,7 +1,7 @@
 class Graf:  # klasa Graf
-    parent = 0
+    parent = None
     d = 0
-    visited = 1
+    visited = False
 
 def N(v, G):               # zbiór sąsiadujących wierzchołków do wierzchołka nr v
     S = [-99]
@@ -11,19 +11,26 @@ def N(v, G):               # zbiór sąsiadujących wierzchołków do wierzchoł
                 S.append(i)
             else:
                 S[0] = i
-    print(S)
+    #print(S)
+    if S[0] == -99:         # pusty wiersz
+        S = []
+
     return S
+
 
 s = 1                   # numer wierzchołka startowego
 
-G = [[0,1,1,0],[0,0,0,1],[0,1,0,1], [0,0,0,0]]
+G = [[0,1,1,0],
+     [0,0,0,1],
+     [0,1,0,1],
+     [0,0,0,0]]
+
 for i in range(len(G)):
     for v in N(i, G):
-        print(v)
+        print(f'{i} {v}')
 
 Data = []
-
 for i in range(len(G)):
     Data.append(Graf())
 
-print(Data[0].d)
+#print(Data[0].d)
