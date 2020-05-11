@@ -1,4 +1,4 @@
-class QueueElement:  # klasa elementu kolejki
+class QueueElement:
     def __init__(self, val=0, last=None):  # konstruktor musi zawierać referencję do lastego elementuw kolejce
         self.v = val
         self.next = None
@@ -25,7 +25,9 @@ class Queue:  # klasa Kolejki
 
     def get(self):  # zwraca pierwszy element z kolejki
         if self.begin != None:
-            return self.begin.v
+            result = self.begin.v
+            self.delete()
+            return result
         return None
 
     def isEmpty(self):  # sprawdza, czy jest pusta
@@ -43,14 +45,9 @@ print("Dodaj 3")
 s.add(3)
 
 print(s.get())
-s.delete()
-print(s.get())
-s.delete()
 print(s.get())
 
 print("Jest pusty: " + str(s.isEmpty()))
-print("usuń")
-s.delete()
 
 print(s.get())
 print("Jest pusty: " + str(s.isEmpty()))
