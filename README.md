@@ -1,2 +1,2 @@
 # ASD
-Algorytmy i Struktury Danych
+This repository contains important algorithms and data structures
